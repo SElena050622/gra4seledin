@@ -34,14 +34,7 @@ public class KardTest {
         $("[data-test-id = 'phone'] input").setValue("+79998888888");
         $("[data-test-id = 'agreement']").click();
         $$("button").find(text("Забронировать")).click();
-        //$(Selectors.byText("Успешно!" + "Встреча успешно забронирована на " + date)).shouldBe(visible, Duration.ofSeconds(15));
-        //$(Selectors.byText("Встреча успешно забронирована на " + date)).shouldBe(visible, Duration.ofSeconds(15));
-        $("[name = 'notification__title']").shouldBe(visible, Duration.ofSeconds(15)).shouldBe(text("Успешно!"));
-        //$("[name = 'notification__content']").shouldBe(visible, Duration.ofSeconds(15)).shouldBe(text("Встреча успешно забронирована на " + date));
-        //$("[data-test-id = 'notification'] .notification__title").shouldBe(visible, Duration.ofSeconds(15)).shouldBe(text("Успешно!"));
-        //SelenideElement blok = $("[data-test-id = 'notification']");
-        //blok.$("[name = 'notification__title']").shouldBe(visible, Duration.ofSeconds(15)).shouldBe(text("Успешно!"));
-        //blok.$("[name = 'notification__content']").shouldBe(visible, Duration.ofSeconds(15)).shouldBe(text("Встреча успешно забронирована на " + date));
-        //$(byText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
+        $("[data-test-id = 'notification'] .notification__title").shouldBe(visible, Duration.ofSeconds(15)).shouldBe(text("Успешно!"));
+        $("[data-test-id = 'notification'] .notification__content").shouldBe(visible, Duration.ofSeconds(15)).shouldBe(text("Встреча успешно забронирована на " + date));
     }
 }
